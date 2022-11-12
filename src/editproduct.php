@@ -69,7 +69,7 @@ if (isset($_POST["update1"])) {
 
     }
     if(empty($image))
-{
+ {
 $sql = "UPDATE products set image ='" . $image1. "'";
 }
 else
