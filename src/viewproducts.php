@@ -1,11 +1,11 @@
-<?php 
+<?php
 session_start();
 include 'connection.php';
+$personid = $_SESSION["personid"];
+// echo $personid;
+$productid =  $_SESSION["id"]; ?>
 
-$_SESSION["personid"] = $_SESSION["id1"];
- $_SESSION["personid"];
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +16,9 @@ $_SESSION["personid"] = $_SESSION["id1"];
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body style="background:#e0dddd;">
-
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-light nav1">
-
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
@@ -33,18 +31,15 @@ $_SESSION["personid"] = $_SESSION["id1"];
       <li class="nav-item">
         <a class="nav-link" href="userregisterform.php"><span class="dash1">User Registration Page</span></a>
       </li>
-   
         <a class="nav-link " href="display.php"> <i class="bi bi-cart" style="margin-left:600px"></i><span class="dash1">My Orders</span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"   color ="#fff" class="bi bi-cart" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg></a>
-     
-     
-
     </ul>
   </div>
 </nav>
+
+    <h3 class="text-center mt-4">Product Listing</h3>
 <?php
-echo "<h3 class='text-center'>PRODUCTS SHOP NOW</h3>";
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -59,7 +54,8 @@ if ($result->num_rows > 0) {
       echo "<h4 class='card-text text-center'><span class='blog-title'>Product Name->" .$row["product_name"]. "</span></h4>";
         echo "<h4 class='card-text text-center'><span class='blog-title'>quantity->" .$row["product_quantity"]. "</span></h4>";
         echo "<h5 class='card-title text-center'><span class='blog-title'>Product Price-". $row["product_price"]."</span></h5>";
-        echo "<a href='cart.php?id=".$row["id"]."' role='button' style='text-decoration:none;color:#fff;'><button class='btn1' type='submit' value=".$row["id"]." name='add'>Add to Cart</a>";
+        echo "<a href='editproduct.php?id=".$row["id"]."' role='button' style='text-decoration:none;color:#fff;'><button class='btn1' type='submit' value=".$row["id"]." name='add'>Edit Product</a>&nbsp;&nbsp;";
+        echo "<a href='deleteproduct.php?id=".$row["id"]."' role='button' style='text-decoration:none;color:#fff;'><button class='btn1' type='submit' value=".$row["id"]." name='add'>Delete Product</a>";
       //  echo "<p class='card-text'><span class='blog-title'>Blog content-</span>" .$row["content"]."</p>";
       echo '</div>';
      echo '</div>';
@@ -67,15 +63,6 @@ if ($result->num_rows > 0) {
        echo '</div>';
      
       }
-
-
-    // echo "<tr><td>".$row["id"]."</td><td>".$row["product_name"]."</td><td>".$row["product_quantity"]."</td><td>".$row["product_price"]."</td><td><img src='./uploads/" .$row["image"]."' width='175' height='200'></td><td><a href='cart.php?id=".$row["id"]."'><button type='submit' value=".$row["id"]." name='add'>Add to Cart</button></a></td></tr>"; -->
-
- $_SESSION["productid"] = $row["id"];
-  
-   
-
-
 
 ?>
 </body>

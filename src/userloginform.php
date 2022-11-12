@@ -14,17 +14,14 @@ session_start();
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light nav1">
-<a class="navbar-brand" href="home.php" style="color:#fff;">Home</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+
 <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
   <li class="nav-item active">
-      <a class="nav-link" href="register.php"><span class="dash1">User Registration Page</span></a>
+      <a class="nav-link" href="userregisterform.php"><span class="dash1">User Registration Page</span></a>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="userdashboard.php"><span class="dash1">User Dashboard</span></a>
+      <a class="nav-link" href="index.php"><span class="dash1">Products Page</span></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="userloginform.php"><span class="dash1">User Login Page</span></a>

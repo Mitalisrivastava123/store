@@ -10,9 +10,21 @@
     }
 .nav1
 {
-    background:#198754;
+    background:#2874f0;
 }
 .dash1
 {
     color:#fff;
+}
+.btn1
+{
+    background:linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    color: #fff;
+    padding: 10px;
+    border-radius:5px;
+}
+.blog-title
+{
+    color:#000;
+    font-size:14px;
 }

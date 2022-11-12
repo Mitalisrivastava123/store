@@ -14,12 +14,15 @@ $password = $_POST["password"];
 $sql = "SELECT id,name,email  FROM register WHERE email = '$email' and password='$password'";
 $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0) {
+   
     while($row = $result->fetch_assoc()) {
-     $_SESSION["id"]=$row["id"];
+     $_SESSION["id1"]=$row["id"];  
+    // echo  $_SESSION["id"];
+    
 $_SESSION["name"]= $row["name"];   
     }
    
 }
-header("Location:userdashboard.php");
+header("Location:index.php");
 
 ?>

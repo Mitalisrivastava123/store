@@ -20,23 +20,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="register.php"><span class="dash1">User Registration Page</span></a>
+                    <a class="nav-link" href="userregisterform.php"><span class="dash1">User Registration Page</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="userdashboard.php"><span class="dash1">User Dashboard</span></a>
+                    <a class="nav-link" href="index.php"><span class="dash1">User Dashboard</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="userloginform.php"><span class="dash1">User Login Page</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="viewproducts.php"><span class="dash1">View All Products </span></a>
+                </li>
             </ul>
         </div>
     </nav>
-    <section class="vh-100" style="background-color: #2779e2;">
+    <section class="vh-100" style="background-color: #e4f0ff;">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <form action="upload.php" method="POST" enctype="multipart/form-data">
                     <div class="col-xl-9">
-                        <h1 class="text-white mb-4">ADMIN DASHBOARD</h1>
+                        <h1 class="text-primary mb-4">ADMIN DASHBOARD</h1>
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body">
                                 <div class="row align-items-center pt-4 pb-3">
