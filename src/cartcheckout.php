@@ -15,7 +15,6 @@ $productid =  $_SESSION["id"];
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg navbar-light nav1">
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,8 +37,7 @@ $productid =  $_SESSION["id"];
       </ul>
     </div>
   </nav>
-
-
+<!-- container start -->
 <div class="w3-container">
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
@@ -58,7 +56,6 @@ $productid =  $_SESSION["id"];
           <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
         </div>
       </form>
-
       <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
         <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
         <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
@@ -67,8 +64,8 @@ $productid =  $_SESSION["id"];
     </div>
   </div>
 </div>
+<!-- fetching data from cart table -->
 <?php
-
 $sql4 =  "SELECT *  FROM cart WHERE userid ='$personid'";
 $result = mysqli_query($conn, $sql4);
 if ($result->num_rows > 0) {
@@ -77,7 +74,7 @@ if ($result->num_rows > 0) {
   }
   echo "<h2>Total Price:$price &#x20b9;</h2>";
 }
-
+// fetching data from register table
 $sql = "SELECT * FROM register WHERE id ='$personid'";
 $result = $conn->query($sql);
 

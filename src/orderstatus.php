@@ -9,10 +9,11 @@ $orderid = $_POST["order"];
 
 
 $personid = $_SESSION["personid"];
-// echo $personid;
+
 $sql = "UPDATE cart  SET orderstatus='".$ordername ."'where id = $orderid";
 if (mysqli_query($conn, $sql)) {
 } 
 header("Location:ordermanagement.php");
 
 ?>
+<!-- updating table cart -->

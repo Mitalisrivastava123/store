@@ -71,6 +71,7 @@ if (isset($_POST["update1"])) {
   }
 }
 ?>
+<!-- html start -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

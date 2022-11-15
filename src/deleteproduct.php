@@ -14,3 +14,4 @@ if ($conn->query($sql) === TRUE) {
   }
 header("Location:viewproducts.php");
 ?>
+<!-- deleting data from product table -->

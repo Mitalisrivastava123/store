@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- html start -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+    <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-light nav1">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -34,6 +35,7 @@
             </ul>
         </div>
     </nav>
+    <!-- navbar end -->
     <section class="vh-100" style="background-color: #e4f0ff;">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -86,5 +88,6 @@
                     </div>
             </div>
     </section>
+    <!-- section end -->
 </body>
 </html>

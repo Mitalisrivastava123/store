@@ -17,3 +17,4 @@ if ($conn->query($sql) === TRUE) {
   header("Location:display.php");
 
 ?>
+<!-- deleting data from cart -->

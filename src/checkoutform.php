@@ -41,7 +41,7 @@ if (mysqli_query($conn, $sql)) {
 
 } 
 }
-
+// inserting data into checkout form
 
 
 

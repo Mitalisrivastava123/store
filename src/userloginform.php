@@ -12,9 +12,8 @@ session_start();
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!-- navvbar start -->
 <nav class="navbar navbar-expand-lg navbar-light nav1">
-
 <div class="collapse navbar-collapse" id="navbarNav">
   <ul class="navbar-nav">
   <li class="nav-item active">
@@ -26,7 +25,6 @@ session_start();
     <li class="nav-item">
       <a class="nav-link" href="userloginform.php"><span class="dash1">User Login Page</span></a>
     </li>
-
   </ul>
 </div>
 </nav>

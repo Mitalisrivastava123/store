@@ -17,10 +17,7 @@ $_SESSION["personid"] = $_SESSION["id1"];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body style="background:#e0dddd;">
-
-
 <nav class="navbar navbar-expand-lg navbar-light nav1">
-
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
@@ -29,11 +26,9 @@ $_SESSION["personid"] = $_SESSION["id1"];
       <li class="nav-item">
         <a class="nav-link" href="userloginform.php"><span class="dash1">User Login Page</span></a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" href="userregisterform.php"><span class="dash1">User Registration Page</span></a>
       </li>
-   
         <a class="nav-link " href="display.php"> <i class="bi bi-cart" style="margin-left:600px"></i><span class="dash1">My Orders</span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"   color ="#fff" class="bi bi-cart" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg></a>
@@ -65,5 +60,6 @@ if ($result->num_rows > 0) {
  $_SESSION["productid"] = $row["id"];
 
 ?>
+<!-- fetching data from product table -->
 </body>
 </html>

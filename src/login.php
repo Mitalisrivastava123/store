@@ -16,9 +16,7 @@ $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0) {
    
     while($row = $result->fetch_assoc()) {
-     $_SESSION["id1"]=$row["id"];  
-    // echo  $_SESSION["id"];
-    
+     $_SESSION["id1"]=$row["id"];    
 $_SESSION["name"]= $row["name"];   
     }
    
@@ -26,3 +24,4 @@ $_SESSION["name"]= $row["name"];
 header("Location:index.php");
 
 ?>
+<!-- fetching data from register table -->

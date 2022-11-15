@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 if(isset($_POST["logout"]))
 {
   session_unset();
@@ -11,9 +9,8 @@ if(isset($_POST["logout"]))
 }
 include 'connection.php';
 $personid = $_SESSION["personid"];
-// echo $personid;
 $productid =  $_SESSION["id"]; ?>
-
+<!-- html start -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,9 +45,9 @@ $productid =  $_SESSION["id"]; ?>
       </ul>
     </div>
   </nav>
-
 </body>
 </html>
+<!-- fetching data from cart table -->
 <?php
 echo "<form action='cartcheckout.php' method='post'><button type='submit' name='cartcheckout' class='mt-4 update1' style='float:right'>Cart Checkout</button></form>";
 echo "<h1> Orders List</h1>";
@@ -67,9 +64,7 @@ if ($result->num_rows > 0) {
       <button type='submit' name='plus1'>+</button></form></td>
       <td><a href='delete.php?id=" . $row["id"] . "' class='delete1'>Delete</td>
       <td>".$row["orderstatus"]."</td>"; 
-   
       $price = $price+ $row["pro_price"];
-
       ?>
       <?php 
     $iduse = $row["id"];
@@ -103,10 +98,4 @@ echo "</table>";
 
 echo "<form action = '' method='post'>
 <button type='submit' name='logout' style='background-color:#17a2b8;padding:10px;color:#fff;margin-top:10px;margin:auto;'>logout User</button></form>";
-
-
-
-
-
-
 ?>
