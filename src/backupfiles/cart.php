@@ -4,7 +4,8 @@ $personid = $_SESSION["personid"];
 // echo $personid;
 
 $idone = $_REQUEST["id"];
-
+// echo $idone;
+// die;
 if(isset($_POST["logout"]))
 {
   session_unset();

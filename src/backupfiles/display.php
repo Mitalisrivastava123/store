@@ -1,14 +1,5 @@
 <?php
 session_start();
-
-
-if(isset($_POST["logout"]))
-{
-  session_unset();
-  session_destroy();
-  echo "<script>window.location.href=display.php'</script>";
-  
-}
 include 'connection.php';
 $personid = $_SESSION["personid"];
 // echo $personid;
@@ -28,6 +19,7 @@ $productid =  $_SESSION["id"]; ?>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light nav1">
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
@@ -36,6 +28,8 @@ $productid =  $_SESSION["id"]; ?>
         <li class="nav-item">
           <a class="nav-link" href="userloginform.php"><span class="dash1">User Login Page</span></a>
         </li>
+
+
         <li class="nav-item">
           <a class="nav-link" href="userregisterform.php"><span class="dash1">User Registration Page</span></a>
         </li>
@@ -50,6 +44,7 @@ $productid =  $_SESSION["id"]; ?>
   </nav>
 
 </body>
+
 </html>
 <?php
 echo "<form action='cartcheckout.php' method='post'><button type='submit' name='cartcheckout' class='mt-4 update1' style='float:right'>Cart Checkout</button></form>";
@@ -100,10 +95,6 @@ if ($result->num_rows > 0) {
   echo "<h3>Total Price:$price &#x20b9;</h3>";
 }
 echo "</table>";
-
-echo "<form action = '' method='post'>
-<button type='submit' name='logout' style='background-color:#17a2b8;padding:10px;color:#fff;margin-top:10px;margin:auto;'>logout User</button></form>";
-
 
 
 
