@@ -89,9 +89,8 @@ if ($result->num_rows > 0) {
 }
 ?>
  <button onclick="document.getElementById('id01').style.display='block'" style="margin-top:90px;background:#2874f0;color:#fff;padding:10px;">Add New Address</button>
-
-
 </body>
+
 
 
 </html>

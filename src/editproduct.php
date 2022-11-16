@@ -148,11 +148,7 @@ if (isset($_POST["update1"])) {
                   <div class="px-5 py-4">
                     <button type="submit" name="submit1" class="btn btn-primary btn-lg">Upload Image</button>
                     <input type="submit" name="update1" value="update" class="update1">
-
                   </div>
-
-
-
                 </div>
               </div>
             </div>

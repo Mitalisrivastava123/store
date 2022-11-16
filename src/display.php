@@ -5,15 +5,21 @@ if(isset($_POST["logout"]))
   session_unset();
   session_destroy();
   echo "<script>window.location.href=display.php'</script>";
-  
 }
 include 'connection.php';
 $personid = $_SESSION["personid"];
-$productid =  $_SESSION["id"]; ?>
+$productid =  $_SESSION["id"]; 
+// your cart is empty
+if(isset($_POST["cartempty"]))
+{
+  $sqlcart = "DELETE  FROM  cart WHERE userid='$personid'";
+  if ($conn->query($sqlcart) === TRUE) {
+  }
+}
+?>
 <!-- html start -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +28,6 @@ $productid =  $_SESSION["id"]; ?>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg navbar-light nav1">
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -51,7 +56,7 @@ $productid =  $_SESSION["id"]; ?>
 <?php
 echo "<form action='cartcheckout.php' method='post'><button type='submit' name='cartcheckout' class='mt-4 update1' style='float:right'>Cart Checkout</button></form>";
 echo "<h1> Orders List</h1>";
-$sql4 =  "SELECT *  FROM cart WHERE userid ='$personid'";
+$sql4 =  "SELECT *  FROM cart WHERE userid ='$personid' and orderstatus='requested'";
 $result = mysqli_query($conn, $sql4);
 if ($result->num_rows > 0) {
   echo "<table border='1px' class='table'>";
@@ -98,4 +103,9 @@ echo "</table>";
 
 echo "<form action = '' method='post'>
 <button type='submit' name='logout' style='background-color:#17a2b8;padding:10px;color:#fff;margin-top:10px;margin:auto;'>logout User</button></form>";
+echo "<br>";
+echo "<form action = '' method='post'>
+<button type='submit' name='cartempty' style='background-color:#2874f0;padding:10px;color:#fff;margin-top:10px;margin:auto;'>Cart Empty</button></form>";
+
+
 ?>

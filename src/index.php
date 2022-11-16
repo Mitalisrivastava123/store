@@ -27,7 +27,6 @@ $_SESSION["personid"] = $_SESSION["id1"];
       <li class="nav-item">
         <a class="nav-link" href="userloginform.php"><span class="dash1">User Login Page</span></a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" href="userregisterform.php"><span class="dash1">User Registration Page</span></a>
       </li>

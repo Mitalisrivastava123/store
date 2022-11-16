@@ -14,11 +14,9 @@ else
 {
 // inserting data into database
     $sql="INSERT INTO register(name,email,address,password) values('$name', '$email', '$address','$password')";
-
   if ($conn->query($sql) === TRUE) {
     
   } else {
-   
   }
 }
 header("Location:userloginform.php");

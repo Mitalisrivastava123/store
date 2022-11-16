@@ -56,7 +56,7 @@ if ($result->num_rows > 0) {
    
     <td>
     <form action='orderstatus.php' method='POST'>
-  <label for='orderstatus'>Order Status</label>
+  <label for='orderstatus'></label>
   <select name='orderstatus'>
     <option value='pending'>Pending</option>
     <option value='approved'>Approved</option>
